@@ -1,0 +1,19 @@
+name: Instalar Node.js y comprobar versión
+
+on: [push]
+
+jobs:
+ install-node:
+   runs-on: ubuntu-latest
+
+   steps:
+   - name: Checkout
+     uses: actions/checkout@v4
+
+   - name: Instalar Node.js
+     run: |
+       curl -sL https://deb.nodesource.com/setup_14.x | sudo -E bash -
+       sudo apt-get install -y nodejs
+
+   - name: Comprobar versión de Node.js
+     run: node -v
