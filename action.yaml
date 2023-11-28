@@ -1,4 +1,5 @@
 name: Instalar Node.js y comprobar versión
+description: Esta acción instala Node.js en el runner de GitHub Actions y comprueba la versión instalada
 
 on: [push]
 
